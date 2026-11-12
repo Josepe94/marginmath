@@ -19,10 +19,10 @@ SITE = {
     "base_url": "https://josepe94.github.io/marginmath",  # no trailing slash; set your real URL
     "lang": "en",
     "google_site_verification": "",             # Search Console meta tag content (optional)
-    "contact_email": "hello@example.com",
+    "contact_email": "josealberto.js94@gmail.com",
     # Legal notice (Spain, LSSI art. 10): fill in before going live.
-    "owner_name": "[Your full name]",
-    "owner_nif": "[Your NIF]",
+    "owner_name": "José Alberto Sánchez Hernández",
+    "owner_nif": "48634992C",
     "owner_city": "Murcia, Spain",
     # Affiliate offers: leave url "" until you are approved; empty offers are not shown.
     "offers": {
