@@ -388,6 +388,12 @@ def build():
                                      + "".join(f"  <url><loc>{u}</loc><lastmod>{today}</lastmod></url>\n" for u in urls) + "</urlset>\n", encoding="utf-8")
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {url('sitemap.xml')}\n", encoding="utf-8")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
+    # Archivos que se copian tal cual a la raíz (p. ej. verificación de Google Search Console)
+    static = ROOT / "static"
+    if static.exists():
+        for f in static.iterdir():
+            if f.is_file():
+                (OUT / f.name).write_bytes(f.read_bytes())
     print(f"Built {len(TOOLS)} calculators + {len(legal_pages())} pages into {OUT}")
 
 
