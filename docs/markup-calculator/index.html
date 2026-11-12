@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markup Calculator — Selling Price from Cost and Markup %</title>
+<meta name="description" content="Add a markup percentage to your cost and get the selling price, profit and resulting gross margin. Includes a markup to margin conversion table.">
+<link rel="canonical" href="https://josepe94.github.io/marginmath/markup-calculator/">
+<meta property="og:title" content="Markup Calculator — Selling Price from Cost and Markup %">
+<meta property="og:description" content="Add a markup percentage to your cost and get the selling price, profit and resulting gross margin. Includes a markup to margin conversion table.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://josepe94.github.io/marginmath/markup-calculator/">
+
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Markup Calculator", "url": "https://josepe94.github.io/marginmath/markup-calculator/", "applicationCategory": "BusinessApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Add a markup percentage to your cost and get the selling price, profit and resulting gross margin. Includes a markup to margin conversion table."}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What markup should I use?", "acceptedAnswer": {"@type": "Answer", "text": "Work backwards from the margin you need to cover overheads and profit. If your overheads eat 30% of revenue and you want 10% net profit, you need about a 40% gross margin, which is a 66.7% markup."}}, {"@type": "Question", "name": "What is keystone pricing?", "acceptedAnswer": {"@type": "Answer", "text": "Keystone pricing means doubling the wholesale cost, a 100% markup. It produces a 50% gross margin and is a common starting point in retail."}}, {"@type": "Question", "name": "Why is my margin lower than my markup?", "acceptedAnswer": {"@type": "Answer", "text": "Because markup is measured against the smaller number (cost) and margin against the larger one (price). For any positive profit, margin is always lower than markup."}}, {"@type": "Question", "name": "Can markup be over 100%?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A 200% markup means the price is three times the cost. Margin, however, can never reach 100%."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "MarginMath", "item": "https://josepe94.github.io/marginmath"}, {"@type": "ListItem", "position": 2, "name": "Markup Calculator", "item": "https://josepe94.github.io/marginmath/markup-calculator/"}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../">MarginMath</a>
+  <nav class="nav"><a href="../profit-margin-calculator/">Profit margin</a><a href="../markup-calculator/">Markup</a><a href="../freelance-hourly-rate-calculator/">Freelance rate</a><a href="../break-even-calculator/">Break-even</a><a href="../ltv-cac-calculator/">LTV:CAC</a><a href="../price-increase-calculator/">Price increase</a></nav>
+</div></header>
+<main class="wrap">
+<article class="tool">
+  <h1>Markup Calculator</h1>
+  <p class="lead">Enter your cost and the markup you want to apply. You get the selling price, the profit per unit and the gross margin that markup really gives you.</p>
+  <form class="calc" data-tool="markup" onsubmit="return false">
+    <div class="calc-top"><label class="cur">Currency <select data-currency-select><option>$</option><option>€</option><option>£</option><option>₹</option><option>A$</option><option>C$</option></select></label></div>
+    <div class="fields"><label class="field" ><span class="lbl">Cost per unit</span>
+<span class="inp"><span class="pre" data-currency>$</span><input type="number" inputmode="decimal" step="any" name="cost" value="40"></span></label><label class="field" ><span class="lbl">Markup</span>
+<span class="inp"><input type="number" inputmode="decimal" step="any" name="markup" value="50"><span class="suf">%</span></span></label></div>
+    <div class="outs" aria-live="polite"><div class="out" data-out="priceOut" data-fmt="money"><span>Selling price</span><b>–</b></div><div class="out" data-out="profit" data-fmt="money"><span>Profit per unit</span><b>–</b></div><div class="out" data-out="marginPct" data-fmt="pct"><span>Gross margin</span><b>–</b></div></div>
+    <p class="err" hidden></p>
+  </form>
+  
+  <section><h2>How it works</h2><ul><li><strong>Selling price</strong> = Cost × (1 + Markup)</li><li><strong>Profit</strong> = Price − Cost</li><li><strong>Gross margin</strong> = Markup ÷ (1 + Markup)</li></ul>
+<table class="ref"><thead><tr><th>Markup</th><th>Equals margin</th></tr></thead><tbody>
+<tr><td>25%</td><td>20.0%</td></tr><tr><td>33.3%</td><td>25.0%</td></tr><tr><td>50%</td><td>33.3%</td></tr><tr><td>66.7%</td><td>40.0%</td></tr><tr><td>100%</td><td>50.0%</td></tr><tr><td>150%</td><td>60.0%</td></tr><tr><td>200%</td><td>66.7%</td></tr></tbody></table></section>
+  <section><h2>Worked example</h2><p>You buy an item for <strong>$40</strong> and apply a <strong>50%</strong> markup: the price is 40 × 1.5 = <strong>$60</strong>, profit is $20 and gross margin is 20 ÷ 60 = <strong>33.3%</strong>. Doubling the cost (100% markup, also called keystone pricing) gives a 50% margin.</p></section>
+  <section class="faq"><h2>Frequently asked questions</h2><details><summary>What markup should I use?</summary><p>Work backwards from the margin you need to cover overheads and profit. If your overheads eat 30% of revenue and you want 10% net profit, you need about a 40% gross margin, which is a 66.7% markup.</p></details><details><summary>What is keystone pricing?</summary><p>Keystone pricing means doubling the wholesale cost, a 100% markup. It produces a 50% gross margin and is a common starting point in retail.</p></details><details><summary>Why is my margin lower than my markup?</summary><p>Because markup is measured against the smaller number (cost) and margin against the larger one (price). For any positive profit, margin is always lower than markup.</p></details><details><summary>Can markup be over 100%?</summary><p>Yes. A 200% markup means the price is three times the cost. Margin, however, can never reach 100%.</p></details></section>
+  <section><h2>Related calculators</h2><div class="cards"><a class="card" href="../profit-margin-calculator/"><b>Profit Margin Calculator</b><span>Enter cost and selling price to get gross margin, markup and profit, or enter a target margin to get the price…</span></a><a class="card" href="../freelance-hourly-rate-calculator/"><b>Freelance Hourly Rate Calculator</b><span>Work out the hourly and day rate you need as a freelancer from your target take-home pay, business expenses, t…</span></a><a class="card" href="../price-increase-calculator/"><b>Price Increase Calculator</b><span>Before raising prices, see how many sales you could lose and still earn the same profit, and how much more you…</span></a></div></section>
+</article></main>
+<footer class="foot"><div class="wrap">
+  <p>MarginMath · Free pricing and profit calculators for small businesses, freelancers and SaaS founders.</p>
+  <p><a href="../about/">About</a> · <a href="../privacy/">Privacy</a> · <a href="../legal/">Legal notice</a> · <a href="../disclosure/">Affiliate disclosure</a></p>
+  <p class="muted">Results are estimates for planning purposes, not financial, tax or legal advice. © 2026 MarginMath</p>
+</div></footer>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LTV to CAC Calculator — Customer Lifetime Value, Ratio and Payback</title>
+<meta name="description" content="Calculate customer lifetime value from ARPA, gross margin and churn, then compare it with acquisition cost: LTV:CAC ratio and CAC payback period in months.">
+<link rel="canonical" href="https://josepe94.github.io/marginmath/ltv-cac-calculator/">
+<meta property="og:title" content="LTV to CAC Calculator — Customer Lifetime Value, Ratio and Payback">
+<meta property="og:description" content="Calculate customer lifetime value from ARPA, gross margin and churn, then compare it with acquisition cost: LTV:CAC ratio and CAC payback period in months.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://josepe94.github.io/marginmath/ltv-cac-calculator/">
+
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "LTV to CAC Calculator", "url": "https://josepe94.github.io/marginmath/ltv-cac-calculator/", "applicationCategory": "BusinessApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Calculate customer lifetime value from ARPA, gross margin and churn, then compare it with acquisition cost: LTV:CAC ratio and CAC payback period in months."}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a good LTV:CAC ratio?", "acceptedAnswer": {"@type": "Answer", "text": "3:1 is the widely quoted benchmark for a healthy subscription business. Below 1:1 you lose money on every customer; far above 5:1 can mean you are under-investing in growth."}}, {"@type": "Question", "name": "What is a good CAC payback period?", "acceptedAnswer": {"@type": "Answer", "text": "Many SaaS investors look for payback under 12 months for small-business customers. Enterprise products often accept 18–24 months because customers stay longer."}}, {"@type": "Question", "name": "Should LTV use revenue or gross margin?", "acceptedAnswer": {"@type": "Answer", "text": "Gross margin. Using raw revenue overstates what a customer is worth because it ignores hosting, support and payment costs."}}, {"@type": "Question", "name": "How do I use annual churn?", "acceptedAnswer": {"@type": "Answer", "text": "Convert it to monthly first: monthly churn ≈ 1 − (1 − annual churn)^(1/12). For 30% annual churn that is about 2.9% per month."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "MarginMath", "item": "https://josepe94.github.io/marginmath"}, {"@type": "ListItem", "position": 2, "name": "LTV to CAC Calculator", "item": "https://josepe94.github.io/marginmath/ltv-cac-calculator/"}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../">MarginMath</a>
+  <nav class="nav"><a href="../profit-margin-calculator/">Profit margin</a><a href="../markup-calculator/">Markup</a><a href="../freelance-hourly-rate-calculator/">Freelance rate</a><a href="../break-even-calculator/">Break-even</a><a href="../ltv-cac-calculator/">LTV:CAC</a><a href="../price-increase-calculator/">Price increase</a></nav>
+</div></header>
+<main class="wrap">
+<article class="tool">
+  <h1>LTV to CAC Calculator</h1>
+  <p class="lead">Enter what an average customer pays per month, your gross margin, your monthly churn and what it costs to acquire a customer.</p>
+  <form class="calc" data-tool="ltv" onsubmit="return false">
+    <div class="calc-top"><label class="cur">Currency <select data-currency-select><option>$</option><option>€</option><option>£</option><option>₹</option><option>A$</option><option>C$</option></select></label></div>
+    <div class="fields"><label class="field" ><span class="lbl">Average revenue per account per month (ARPA)</span>
+<span class="inp"><span class="pre" data-currency>$</span><input type="number" inputmode="decimal" step="any" name="arpa" value="50"></span></label><label class="field" ><span class="lbl">Gross margin</span>
+<span class="inp"><input type="number" inputmode="decimal" step="any" name="gm" value="80"><span class="suf">%</span></span></label><label class="field" ><span class="lbl">Monthly churn</span>
+<span class="inp"><input type="number" inputmode="decimal" step="any" name="churn" value="3"><span class="suf">%</span></span><small>Share of customers who cancel each month.</small></label><label class="field" ><span class="lbl">Customer acquisition cost (CAC)</span>
+<span class="inp"><span class="pre" data-currency>$</span><input type="number" inputmode="decimal" step="any" name="cac" value="400"></span></label></div>
+    <div class="outs" aria-live="polite"><div class="out" data-out="ltv" data-fmt="money"><span>Customer lifetime value (LTV)</span><b>–</b></div><div class="out" data-out="ratio" data-fmt="ratio"><span>LTV : CAC</span><b>–</b></div><div class="out" data-out="payback" data-fmt="months"><span>CAC payback period</span><b>–</b></div><div class="out" data-out="lifetime" data-fmt="months"><span>Average customer lifetime</span><b>–</b></div></div>
+    <p class="err" hidden></p>
+  </form>
+  
+  <section><h2>How it works</h2><ul><li><strong>Customer lifetime</strong> = 1 ÷ Monthly churn</li><li><strong>LTV</strong> = ARPA × Gross margin ÷ Monthly churn</li><li><strong>LTV : CAC</strong> = LTV ÷ CAC</li><li><strong>CAC payback</strong> = CAC ÷ (ARPA × Gross margin)</li></ul>
+<p>This is the simple, margin-based LTV used by most SaaS dashboards. It assumes churn stays constant and ignores expansion revenue and discounting.</p></section>
+  <section><h2>Worked example</h2><p>A customer pays <strong>$50</strong> a month at an 80% gross margin, so you keep $40 a month. With <strong>3%</strong> monthly churn the average customer stays 33 months and is worth 40 ÷ 0.03 = <strong>$1,333</strong>. If acquiring them costs $400, LTV:CAC is <strong>3.3 : 1</strong> and you recover the CAC in 10 months.</p></section>
+  <section class="faq"><h2>Frequently asked questions</h2><details><summary>What is a good LTV:CAC ratio?</summary><p>3:1 is the widely quoted benchmark for a healthy subscription business. Below 1:1 you lose money on every customer; far above 5:1 can mean you are under-investing in growth.</p></details><details><summary>What is a good CAC payback period?</summary><p>Many SaaS investors look for payback under 12 months for small-business customers. Enterprise products often accept 18–24 months because customers stay longer.</p></details><details><summary>Should LTV use revenue or gross margin?</summary><p>Gross margin. Using raw revenue overstates what a customer is worth because it ignores hosting, support and payment costs.</p></details><details><summary>How do I use annual churn?</summary><p>Convert it to monthly first: monthly churn ≈ 1 − (1 − annual churn)^(1/12). For 30% annual churn that is about 2.9% per month.</p></details></section>
+  <section><h2>Related calculators</h2><div class="cards"><a class="card" href="../break-even-calculator/"><b>Break-Even Point Calculator</b><span>Find how many units you must sell each month to cover fixed costs, the break-even revenue and your contributio…</span></a><a class="card" href="../price-increase-calculator/"><b>Price Increase Calculator</b><span>Before raising prices, see how many sales you could lose and still earn the same profit, and how much more you…</span></a><a class="card" href="../profit-margin-calculator/"><b>Profit Margin Calculator</b><span>Enter cost and selling price to get gross margin, markup and profit, or enter a target margin to get the price…</span></a></div></section>
+</article></main>
+<footer class="foot"><div class="wrap">
+  <p>MarginMath · Free pricing and profit calculators for small businesses, freelancers and SaaS founders.</p>
+  <p><a href="../about/">About</a> · <a href="../privacy/">Privacy</a> · <a href="../legal/">Legal notice</a> · <a href="../disclosure/">Affiliate disclosure</a></p>
+  <p class="muted">Results are estimates for planning purposes, not financial, tax or legal advice. © 2026 MarginMath</p>
+</div></footer>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

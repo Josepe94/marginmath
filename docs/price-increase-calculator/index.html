@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Price Increase Calculator — How Many Customers Can You Lose and Still Profit?</title>
+<meta name="description" content="Before raising prices, see how many sales you could lose and still earn the same profit, and how much more you make if nobody leaves. Works for price cuts too.">
+<link rel="canonical" href="https://josepe94.github.io/marginmath/price-increase-calculator/">
+<meta property="og:title" content="Price Increase Calculator — How Many Customers Can You Lose and Still Profit?">
+<meta property="og:description" content="Before raising prices, see how many sales you could lose and still earn the same profit, and how much more you make if nobody leaves. Works for price cuts too.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://josepe94.github.io/marginmath/price-increase-calculator/">
+
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Price Increase Calculator", "url": "https://josepe94.github.io/marginmath/price-increase-calculator/", "applicationCategory": "BusinessApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Before raising prices, see how many sales you could lose and still earn the same profit, and how much more you make if nobody leaves. Works for price cuts too."}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much should I raise my prices?", "acceptedAnswer": {"@type": "Answer", "text": "Many businesses test 5–15% increases on new customers first. Use this calculator to see the sales drop you can tolerate, then compare it with what you actually see in the test."}}, {"@type": "Question", "name": "Why does a small discount need so many extra sales?", "acceptedAnswer": {"@type": "Answer", "text": "Because a discount comes entirely out of your margin. If your margin is thin, a 10% discount can remove a third or more of the profit on every sale."}}, {"@type": "Question", "name": "Does this include fixed costs?", "acceptedAnswer": {"@type": "Answer", "text": "Fixed costs don't change with a price move, so they cancel out: keeping the same total contribution keeps the same profit."}}, {"@type": "Question", "name": "What is price elasticity?", "acceptedAnswer": {"@type": "Answer", "text": "It measures how much demand changes when the price changes. This calculator doesn't need it: it tells you the break-even elasticity, which you then compare with what you expect from your customers."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "MarginMath", "item": "https://josepe94.github.io/marginmath"}, {"@type": "ListItem", "position": 2, "name": "Price Increase Calculator", "item": "https://josepe94.github.io/marginmath/price-increase-calculator/"}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../">MarginMath</a>
+  <nav class="nav"><a href="../profit-margin-calculator/">Profit margin</a><a href="../markup-calculator/">Markup</a><a href="../freelance-hourly-rate-calculator/">Freelance rate</a><a href="../break-even-calculator/">Break-even</a><a href="../ltv-cac-calculator/">LTV:CAC</a><a href="../price-increase-calculator/">Price increase</a></nav>
+</div></header>
+<main class="wrap">
+<article class="tool">
+  <h1>Price Increase Calculator</h1>
+  <p class="lead">Thinking about raising (or cutting) your prices? Enter your current price, the variable cost per sale and the change you are considering.</p>
+  <form class="calc" data-tool="priceinc" onsubmit="return false">
+    <div class="calc-top"><label class="cur">Currency <select data-currency-select><option>$</option><option>€</option><option>£</option><option>₹</option><option>A$</option><option>C$</option></select></label></div>
+    <div class="fields"><label class="field" ><span class="lbl">Current price</span>
+<span class="inp"><span class="pre" data-currency>$</span><input type="number" inputmode="decimal" step="any" name="price" value="100"></span></label><label class="field" ><span class="lbl">Variable cost per sale</span>
+<span class="inp"><span class="pre" data-currency>$</span><input type="number" inputmode="decimal" step="any" name="variable" value="60"></span></label><label class="field" ><span class="lbl">Price change</span>
+<span class="inp"><input type="number" inputmode="decimal" step="any" name="change" value="10"><span class="suf">%</span></span><small>Use a negative number for a discount, e.g. −15.</small></label><label class="field" ><span class="lbl">Current sales per month (optional)</span>
+<span class="inp"><input type="number" inputmode="decimal" step="any" name="volume" value="200"></span></label></div>
+    <div class="outs" aria-live="polite"><div class="out" data-out="newPrice" data-fmt="money"><span>New price</span><b>–</b></div><div class="out" data-out="volumeChange" data-fmt="pctSigned"><span>Sales change that keeps the same profit</span><b>–</b></div><div class="out" data-out="profitGain" data-fmt="pctSigned"><span>Profit change if sales stay the same</span><b>–</b></div><div class="out" data-out="salesNeeded" data-fmt="int"><span>Sales per month for the same profit</span><b>–</b></div></div>
+    <p class="err" hidden></p>
+  </form>
+  
+  <section><h2>How it works</h2><ul><li><strong>Contribution per sale</strong> = Price − Variable cost</li><li><strong>Break-even sales change</strong> = (Old contribution ÷ New contribution) − 1</li><li><strong>Profit change at the same volume</strong> = Price change ÷ Old contribution</li></ul>
+<p>The lower your margin, the more powerful a price increase is, and the more dangerous a discount.</p></section>
+  <section><h2>Worked example</h2><p>You sell at <strong>$100</strong> with <strong>$60</strong> of variable cost, so each sale contributes $40. A <strong>10%</strong> price increase lifts the contribution to $50: you could lose up to <strong>20%</strong> of your sales and still earn the same profit, and if nobody leaves your profit rises by 25%.</p>
+<p>The same maths warns about discounts: a 10% discount drops the contribution to $30, so you would need <strong>33% more sales</strong> just to stand still.</p></section>
+  <section class="faq"><h2>Frequently asked questions</h2><details><summary>How much should I raise my prices?</summary><p>Many businesses test 5–15% increases on new customers first. Use this calculator to see the sales drop you can tolerate, then compare it with what you actually see in the test.</p></details><details><summary>Why does a small discount need so many extra sales?</summary><p>Because a discount comes entirely out of your margin. If your margin is thin, a 10% discount can remove a third or more of the profit on every sale.</p></details><details><summary>Does this include fixed costs?</summary><p>Fixed costs don&#x27;t change with a price move, so they cancel out: keeping the same total contribution keeps the same profit.</p></details><details><summary>What is price elasticity?</summary><p>It measures how much demand changes when the price changes. This calculator doesn&#x27;t need it: it tells you the break-even elasticity, which you then compare with what you expect from your customers.</p></details></section>
+  <section><h2>Related calculators</h2><div class="cards"><a class="card" href="../profit-margin-calculator/"><b>Profit Margin Calculator</b><span>Enter cost and selling price to get gross margin, markup and profit, or enter a target margin to get the price…</span></a><a class="card" href="../break-even-calculator/"><b>Break-Even Point Calculator</b><span>Find how many units you must sell each month to cover fixed costs, the break-even revenue and your contributio…</span></a><a class="card" href="../markup-calculator/"><b>Markup Calculator</b><span>Add a markup percentage to your cost and get the selling price, profit and resulting gross margin. Includes a …</span></a></div></section>
+</article></main>
+<footer class="foot"><div class="wrap">
+  <p>MarginMath · Free pricing and profit calculators for small businesses, freelancers and SaaS founders.</p>
+  <p><a href="../about/">About</a> · <a href="../privacy/">Privacy</a> · <a href="../legal/">Legal notice</a> · <a href="../disclosure/">Affiliate disclosure</a></p>
+  <p class="muted">Results are estimates for planning purposes, not financial, tax or legal advice. © 2026 MarginMath</p>
+</div></footer>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

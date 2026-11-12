@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Break-Even Calculator — Units and Revenue to Cover Your Costs</title>
+<meta name="description" content="Find how many units you must sell each month to cover fixed costs, the break-even revenue and your contribution margin per unit.">
+<link rel="canonical" href="https://josepe94.github.io/marginmath/break-even-calculator/">
+<meta property="og:title" content="Break-Even Calculator — Units and Revenue to Cover Your Costs">
+<meta property="og:description" content="Find how many units you must sell each month to cover fixed costs, the break-even revenue and your contribution margin per unit.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://josepe94.github.io/marginmath/break-even-calculator/">
+
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Break-Even Point Calculator", "url": "https://josepe94.github.io/marginmath/break-even-calculator/", "applicationCategory": "BusinessApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Find how many units you must sell each month to cover fixed costs, the break-even revenue and your contribution margin per unit."}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What happens if my price is below my variable cost?", "acceptedAnswer": {"@type": "Answer", "text": "You can never break even: every extra sale loses money. Raise the price or cut the variable cost before worrying about volume."}}, {"@type": "Question", "name": "Should I round the break-even units up?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can't sell part of a unit, so the calculator rounds up to the next whole unit."}}, {"@type": "Question", "name": "Is break-even analysis useful for services?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Treat one billable hour or one project as a unit, and use the direct costs of delivering it (subcontractors, tools) as the variable cost."}}, {"@type": "Question", "name": "How can I lower my break-even point?", "acceptedAnswer": {"@type": "Answer", "text": "Three levers: cut fixed costs, raise prices, or reduce the variable cost per unit. Price usually has the biggest effect because it raises the contribution of every sale."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "MarginMath", "item": "https://josepe94.github.io/marginmath"}, {"@type": "ListItem", "position": 2, "name": "Break-Even Point Calculator", "item": "https://josepe94.github.io/marginmath/break-even-calculator/"}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../">MarginMath</a>
+  <nav class="nav"><a href="../profit-margin-calculator/">Profit margin</a><a href="../markup-calculator/">Markup</a><a href="../freelance-hourly-rate-calculator/">Freelance rate</a><a href="../break-even-calculator/">Break-even</a><a href="../ltv-cac-calculator/">LTV:CAC</a><a href="../price-increase-calculator/">Price increase</a></nav>
+</div></header>
+<main class="wrap">
+<article class="tool">
+  <h1>Break-Even Point Calculator</h1>
+  <p class="lead">Enter your monthly fixed costs, your price and the variable cost of each unit. The calculator shows how many sales you need before you make any profit.</p>
+  <form class="calc" data-tool="breakeven" onsubmit="return false">
+    <div class="calc-top"><label class="cur">Currency <select data-currency-select><option>$</option><option>€</option><option>£</option><option>₹</option><option>A$</option><option>C$</option></select></label></div>
+    <div class="fields"><label class="field" ><span class="lbl">Fixed costs per month</span>
+<span class="inp"><span class="pre" data-currency>$</span><input type="number" inputmode="decimal" step="any" name="fixed" value="5000"></span><small>Rent, salaries, software, insurance: costs that don&#x27;t change with sales.</small></label><label class="field" ><span class="lbl">Price per unit</span>
+<span class="inp"><span class="pre" data-currency>$</span><input type="number" inputmode="decimal" step="any" name="price" value="50"></span></label><label class="field" ><span class="lbl">Variable cost per unit</span>
+<span class="inp"><span class="pre" data-currency>$</span><input type="number" inputmode="decimal" step="any" name="variable" value="20"></span><small>Materials, payment fees, shipping, commissions.</small></label><label class="field" ><span class="lbl">Target profit per month (optional)</span>
+<span class="inp"><span class="pre" data-currency>$</span><input type="number" inputmode="decimal" step="any" name="target" value="0"></span></label></div>
+    <div class="outs" aria-live="polite"><div class="out" data-out="units" data-fmt="int"><span>Break-even units per month</span><b>–</b></div><div class="out" data-out="revenue" data-fmt="money"><span>Break-even revenue</span><b>–</b></div><div class="out" data-out="contribution" data-fmt="money"><span>Contribution margin per unit</span><b>–</b></div><div class="out" data-out="contributionPct" data-fmt="pct"><span>Contribution margin ratio</span><b>–</b></div><div class="out" data-out="unitsTarget" data-fmt="int"><span>Units to reach target profit</span><b>–</b></div></div>
+    <p class="err" hidden></p>
+  </form>
+  
+  <section><h2>How it works</h2><ul><li><strong>Contribution margin</strong> = Price − Variable cost</li><li><strong>Break-even units</strong> = Fixed costs ÷ Contribution margin</li><li><strong>Break-even revenue</strong> = Break-even units × Price</li><li><strong>Units for a target profit</strong> = (Fixed costs + Target profit) ÷ Contribution margin</li></ul></section>
+  <section><h2>Worked example</h2><p>With <strong>$5,000</strong> of monthly fixed costs, a <strong>$50</strong> price and <strong>$20</strong> of variable cost, each sale contributes $30. You break even at 5,000 ÷ 30 = <strong>167 units</strong> a month ($8,350 of revenue). To make $3,000 of profit you need 267 units.</p></section>
+  <section class="faq"><h2>Frequently asked questions</h2><details><summary>What happens if my price is below my variable cost?</summary><p>You can never break even: every extra sale loses money. Raise the price or cut the variable cost before worrying about volume.</p></details><details><summary>Should I round the break-even units up?</summary><p>Yes. You can&#x27;t sell part of a unit, so the calculator rounds up to the next whole unit.</p></details><details><summary>Is break-even analysis useful for services?</summary><p>Yes. Treat one billable hour or one project as a unit, and use the direct costs of delivering it (subcontractors, tools) as the variable cost.</p></details><details><summary>How can I lower my break-even point?</summary><p>Three levers: cut fixed costs, raise prices, or reduce the variable cost per unit. Price usually has the biggest effect because it raises the contribution of every sale.</p></details></section>
+  <section><h2>Related calculators</h2><div class="cards"><a class="card" href="../profit-margin-calculator/"><b>Profit Margin Calculator</b><span>Enter cost and selling price to get gross margin, markup and profit, or enter a target margin to get the price…</span></a><a class="card" href="../price-increase-calculator/"><b>Price Increase Calculator</b><span>Before raising prices, see how many sales you could lose and still earn the same profit, and how much more you…</span></a><a class="card" href="../ltv-cac-calculator/"><b>LTV to CAC Calculator</b><span>Calculate customer lifetime value from ARPA, gross margin and churn, then compare it with acquisition cost: LT…</span></a></div></section>
+</article></main>
+<footer class="foot"><div class="wrap">
+  <p>MarginMath · Free pricing and profit calculators for small businesses, freelancers and SaaS founders.</p>
+  <p><a href="../about/">About</a> · <a href="../privacy/">Privacy</a> · <a href="../legal/">Legal notice</a> · <a href="../disclosure/">Affiliate disclosure</a></p>
+  <p class="muted">Results are estimates for planning purposes, not financial, tax or legal advice. © 2026 MarginMath</p>
+</div></footer>
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

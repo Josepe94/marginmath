@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://josepe94.github.io/marginmath/sitemap.xml
